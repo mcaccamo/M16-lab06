@@ -19,6 +19,10 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
  */
 public class Desk extends GeneralPathWrapper implements Shape
 {
+    //        @param x : x coordinate of the top left of the desk
+    //        @param y : y coordinate of the top left of the desk
+    //        @param width : the width of the desk
+    //        @param height : the height of the desk
     
     public Desk(double x, double y, double width, double height)
     {
