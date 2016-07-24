@@ -133,6 +133,8 @@ public class AllMyDrawings
     
     public static void drawPicture3(Graphics2D g2) {
 	
+	/*
+	
 	// label the drawing
 	
 	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
@@ -146,5 +148,16 @@ public class AllMyDrawings
 	g2.setColor(Color.RED);     g2.draw(large);
 	g2.setColor(Color.GREEN);   g2.draw(smallCC);
 	
+	*/
+	
+	g2.drawString("A wild Poke Ball appeared!", 20, 20);
+	
+	PokeBall b = new PokeBall(115,130,100);
+	Stroke thick = new BasicStroke(3.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);	
+	Stroke orig = g2.getStroke();
+	g2.setStroke(thick);
+	g2.setColor(Color.RED);
+	g2.draw(b);
+    
     }       
 }
