@@ -18,146 +18,83 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 
 public class AllMyDrawings
 {
-    /** Draw a picture with a few houses 
+
+    /** Draw a picture with a three Poke Balls 
      */
     
     public static void drawPicture1(Graphics2D g2) {
 	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
+	g2.drawString("Valor, Mystic, and Instinct.", 20, 20);
+
+        PokeBall b = new PokeBall(115,130,100);
+        Stroke thick = new BasicStroke(3.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
+        Stroke orig = g2.getStroke();
+        g2.setStroke(thick);
+	g2.setColor(Color.RED);
+        g2.draw(b);
 	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
+	Shape b2 = ShapeTransforms.translatedCopyOf(b,300,0);               
+        g2.setColor(Color.BLUE); 
+	g2.draw(b2);                         
 	
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
+	b2 = ShapeTransforms.scaledCopyOfLL(b2,0.75,0.75);                   
+        b2 = ShapeTransforms.translatedCopyOf(b2,-125,150);              
+	g2.setColor(Color.YELLOW);
+	g2.draw(b2);
 	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
-	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
-	
-	// Draw two houses with Windows
-	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); g2.draw(hw2);
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK); 
-	g2.drawString("A few houses by Phill Conrad", 20,20);
-    }
+	}
     
     
-    /** Draw a picture with a few houses and coffee cups
+    /** Draw a picture with a variety of
+	normal Poke Balls and Diamond Balls
      */
+    
     public static void drawPicture2(Graphics2D g2) {
 	
-	// Draw some coffee cups.
+	Stroke thick = new BasicStroke(2.5f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);
+        Stroke orig = g2.getStroke();
+        g2.setStroke(thick);
 	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	CoffeeCup tallSkinny = new CoffeeCup(20,150,20,40);
-	CoffeeCup shortFat = new CoffeeCup(20,250,40,20);
+       	PokeBall m = new PokeBall(100,100,75);
+	PokeBall s = new PokeBall(300,250,70); //300,250,70
+	DiamondBall d = new DiamondBall(75,250,40);
+	DiamondBall dd = new DiamondBall(500,150,100);
 	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	g2.setColor(Color.BLUE);    g2.draw(tallSkinny);
-	g2.setColor(Color.MAGENTA); g2.draw(shortFat);
+	g2.setColor(Color.RED);     g2.draw(m);
 	
-	House h1 = new House(100,250,50,75);
-	g2.setColor(Color.CYAN); g2.draw(h1);
+	Shape ss = ShapeTransforms.rotatedCopyOf(s,90);
+	g2.setColor(Color.ORANGE);   g2.draw(ss);
 	
-	// Make a black house that's half the size, 
-	// and moved over 150 pixels in x direction
-	Shape h2 = ShapeTransforms.scaledCopyOfLL(h1,0.5,0.5);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
-	g2.setColor(Color.BLACK); g2.draw(h2);
+	g2.setColor(Color.CYAN);    g2.draw(d);
 	
-	// Here's a house that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	h2 = ShapeTransforms.scaledCopyOfLL(h2,4,4);
-	h2 = ShapeTransforms.translatedCopyOf(h2,150,0);
+	Shape sdd = ShapeTransforms.rotatedCopyOf(dd, Math.PI);
+	g2.setColor(Color.MAGENTA);  g2.draw(sdd);
 	
-	// We'll draw this with a thicker stroke
-	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
+	g2.setColor(Color.BLACK);
+	g2.drawString("More Poke/Diamond Balls by Alex Yuen!", 300,400);
 	
-	// for hex colors, see (e.g.) http://en.wikipedia.org/wiki/List_of_colors
-	// #002FA7 is "International Klein Blue" according to Wikipedia
-	// In HTML we use #, but in Java (and C/C++) its 0x
-	
-	Stroke orig=g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(new Color(0x002FA7)); 
-	g2.draw(h2); 
-	
-	// Draw two houses with Windows
-	
-	HouseWithWindows hw1 = new HouseWithWindows(50,350,40,75);
-	HouseWithWindows hw2 = new HouseWithWindows(200,350,200,100);
-	
-	g2.draw(hw1);
-	g2.setColor(new Color(0x8F00FF)); 
-	
-	// Rotate the second house 45 degrees around its center.
-	Shape hw3 = ShapeTransforms.rotatedCopyOf(hw2, Math.PI/4.0);
-	
-	g2.draw(hw3);
-	
-	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
-	
-	g2.setStroke(orig);
-	g2.setColor(Color.BLACK); 
-	g2.drawString("A bunch of Coffee Cups and a few houses by Phill Conrad", 20,20);
     }
     
-    /** Draw a different picture with a few houses and coffee cups
+    /** Draw a different picture with multiple Diamond Balls
      */
     
     public static void drawPicture3(Graphics2D g2) {
 	
-	/*
+	g2.drawString("A wild Diamond Ball appeared!", 20, 20);
 	
-	// label the drawing
+	DiamondBall bdb = new DiamondBall(300,250,200);
+	DiamondBall sdb = new DiamondBall(300,375,50);
 	
-	g2.drawString("A bunch of Coffee Cups by Phill Conrad", 20,20);
+	g2.setColor(Color.BLUE); g2.draw(bdb);
+	g2.setColor(Color.RED); //g2.draw(sdb);
 	
-	
-	// Draw some coffee cups.
-	
-	CoffeeCup large = new CoffeeCup(100,50,225,150);
-	CoffeeCup smallCC = new CoffeeCup(20,50,40,30);
-	
-	g2.setColor(Color.RED);     g2.draw(large);
-	g2.setColor(Color.GREEN);   g2.draw(smallCC);
-	
-	*/
-	
-	g2.drawString("A wild Poke Ball appeared!", 20, 20);
-	
-	PokeBall b = new PokeBall(115,130,100);
-	Stroke thick = new BasicStroke(3.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);	
-	Stroke orig = g2.getStroke();
-	g2.setStroke(thick);
-	g2.setColor(Color.RED);
-	g2.draw(b);
-    
+	Shape s2 = ShapeTransforms.translatedCopyOf(sdb,-110,-190);
+	g2.draw(s2);
+	s2 = ShapeTransforms.translatedCopyOf(sdb,110,-190);
+	g2.draw(s2);
+	s2 = ShapeTransforms.translatedCopyOf(sdb,-110, -55);
+	g2.draw(s2);
+	s2 = ShapeTransforms.translatedCopyOf(sdb,110,-55);
+        g2.draw(s2);
     }       
 }
