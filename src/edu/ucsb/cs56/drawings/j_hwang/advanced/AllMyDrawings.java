@@ -12,8 +12,8 @@ import edu.ucsb.cs56.drawings.utilities.GeneralPathWrapper;
 /**
  * A class with static methods for drawing various pictures
  * 
- * @author Phill Conrad 
- * @version for UCSB CS56, W16 
+ * @author Austin Hwang 
+ * @version for UCSB CS56, M16 
  */
 
 public class AllMyDrawings

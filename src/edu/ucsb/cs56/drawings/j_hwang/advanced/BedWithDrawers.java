@@ -5,6 +5,14 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.Line2D;
 
 
+/**
+ * A class with methods for drawing beds with drawers
+ * 
+ * @author Austin Hwang 
+ * @version for UCSB CS56, M16 
+ */
+
+
 public class BedWithDrawers extends Bed implements Shape{
 
     // ctor

@@ -22,9 +22,8 @@ public class Bed extends GeneralPathWrapper implements Shape
        
        @param x x coord of upper left corner of bed
        @param y y coord of upper left corner of bed
-       @param width width of the horizontal bed frame
-       @param height height of the horizontal part 
-              of the frame where the mattressits
+       @param w width of the horizontal bed frame
+       @param h height of the horizontal part of the bedframe
     */
     //public House(double x, double y, double width, double height){
     public Bed(double x, double y, double w, double h){
