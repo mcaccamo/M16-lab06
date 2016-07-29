@@ -39,3 +39,5 @@ Student REPOS:
 -https://github.com/UCSB-CS56-M16/FEEDBACK_dvanmali_Lab06/blob/master/README.md
 
 -https://github.com/UCSB-CS56-M16/FEEDBACK_ttsherpa_Lab06/blob/master/README.md
+
+NOTE: TTSherpa repo is part of Dylan Lynchs pull requests, student cloned from wrong repo
