@@ -28,8 +28,8 @@ You can test this with studentName set to <code>pconrad</code>, <code>andrewberl
 
 Student REPOS: 
 
-https://github.com/UCSB-CS56-M16/FEEDBACK_atyuen_Lab06/blob/master/README.md
-https://github.com/UCSB-CS56-M16/FEEDBACK_saisrimat96_Lab06/blob/master/README.md
-https://github.com/UCSB-CS56-M16/FEEDBACK_ije896_Lab06/blob/master/README.md
-https://github.com/UCSB-CS56-M16/FEEDBACK_hwangaustin_Lab06/edit/master/README.md
-https://github.com/UCSB-CS56-M16/FEEDBACK_dvanmali_Lab06/blob/master/README.md
+-https://github.com/UCSB-CS56-M16/FEEDBACK_atyuen_Lab06/blob/master/README.md
+-https://github.com/UCSB-CS56-M16/FEEDBACK_saisrimat96_Lab06/blob/master/README.md
+-https://github.com/UCSB-CS56-M16/FEEDBACK_ije896_Lab06/blob/master/README.md
+-https://github.com/UCSB-CS56-M16/FEEDBACK_hwangaustin_Lab06/edit/master/README.md
+-https://github.com/UCSB-CS56-M16/FEEDBACK_dvanmali_Lab06/blob/master/README.md
