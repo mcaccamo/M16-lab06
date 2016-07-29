@@ -37,3 +37,5 @@ Student REPOS:
 -https://github.com/UCSB-CS56-M16/FEEDBACK_hwangaustin_Lab06/edit/master/README.md
 
 -https://github.com/UCSB-CS56-M16/FEEDBACK_dvanmali_Lab06/blob/master/README.md
+
+-https://github.com/UCSB-CS56-M16/FEEDBACK_ttsherpa_Lab06/blob/master/README.md
